@@ -1,0 +1,211 @@
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: #333;
+    text-align: center;
+}
+
+/* Header styling */
+header {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #6a11cb;
+}
+
+/* Section styling */
+section {
+    padding: 60px 10%;
+    background: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Projects */
+.project {
+    background: #f4f4f4;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.project h3, .project p {
+    margin: 10px 0;
+}
+
+.project a {
+    display: inline-block;
+    background: #6a11cb;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.project a:hover {
+    background: #2575fc;
+}
+
+/* Footer */
+footer {
+    background: rgba(51, 51, 51, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    clear: both;
+}
+
+/* Utility Classes */
+
+/* Enhanced Button Styles */
+.button, a button {
+    font-size: 16px;
+    color: #fff;
+    background-color: #6a11cb;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    outline: none;
+    margin: 5px;
+}
+
+.button:hover, a button:hover {
+    background-color: #2575fc;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button:active, a button:active {
+    background-color: #1e60d4;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Aligning buttons for better layout */
+.contact-buttons {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+
+#skills {
+    overflow: hidden;
+    padding: 20px;
+    background: #f4f4f4; /* Light background to make the skill cards stand out */
+}
+
+.skills-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+    padding-bottom: 10px; /* Prevents scrollbar from overlapping content */
+}
+
+.skill-card {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 10px 15px;
+    white-space: nowrap; /* Ensures the text stays on one line */
+    cursor: grab; /* Indicates the element is draggable */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-card:last-child {
+    margin-right: 0; /* Removes the margin on the last card */
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Custom scrollbar */
+.skills-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.skills-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.skills-container::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+    .contact-buttons {
+        display: block;
+    }
+
+    .button, a button {
+        display: block;
+        margin: 10px auto; /* Center button on smaller screens */
+    }
+}
